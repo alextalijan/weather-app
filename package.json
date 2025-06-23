@@ -1,7 +1,7 @@
 {
-  "name": "es-lint-template",
+  "name": "weather-app",
   "version": "1.0.0",
-  "description": "This is my template for ESLint and Prettier formatters.",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
