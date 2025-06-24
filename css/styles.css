@@ -70,8 +70,13 @@ body {
   gap: 1rem;
 }
 
+.hidden {
+  display: none;
+}
+
 .location {
   font-size: 2rem;
+  text-align: center;
 }
 
 .location-description {
@@ -115,5 +120,5 @@ body {
 
 .days-list img {
   width: 30px;
-  margin-right: 2rem;
+  margin-right: auto;
 }

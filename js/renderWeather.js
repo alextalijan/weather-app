@@ -1,16 +1,19 @@
-import getIconSRC from 'getIconSRC.js';
+import getIconSRC from './getIconSRC.js';
 
 const renderWeather = function thatDisplaysWeatherDataOnScreen(weatherData) {
   const content = document.querySelector('.content');
+  content.classList.remove('hidden');
   content.textContent = '';
 
   const locationHeading = document.createElement('h2');
   locationHeading.classList.add('location');
   locationHeading.textContent = weatherData.address;
+  content.appendChild(locationHeading);
 
   const locationDescription = document.createElement('p');
   locationDescription.classList.add('location-description');
   locationDescription.textContent = weatherData.description;
+  content.appendChild(locationDescription);
 
   const daysList = document.createElement('ul');
   daysList.classList.add('days-list');
@@ -20,17 +23,17 @@ const renderWeather = function thatDisplaysWeatherDataOnScreen(weatherData) {
     icon.alt = `${day.icon} weather icon`;
 
     const maxTemp = document.createElement('span');
-    maxTemp.textContent = `Max: ${day.tempMax}`;
+    maxTemp.textContent = `Max: ${day.tempMax}°F`;
 
     const minTemp = document.createElement('span');
-    minTemp.textContent = `Min: ${day.tempMin}`;
+    minTemp.textContent = `Min: ${day.tempMin}°F`;
 
     const precipitation = document.createElement('span');
-    precipitation.textContent = `Chance of rain: ${day.precipitationProb}`;
+    precipitation.textContent = `Chance of rain: ${day.precipitationProb}%`;
 
     const date = document.createElement('span');
     // If the weather is about today, say today instead of the date
-    if (weatherData.days.indexof(day) === 0) {
+    if (weatherData.days.indexOf(day) === 0) {
       date.textContent = 'Today';
 
       // Append everything to the div about today's weather
