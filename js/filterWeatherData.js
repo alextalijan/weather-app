@@ -11,7 +11,6 @@ const filterWeatherData = function thatFiltersOnlyDataWeNeed(weatherAPIObject) {
       tempMax: day.tempmax,
       tempMin: day.tempmin,
       precipitationProb: day.precipprob,
-      description: day.description,
       icon: day.icon,
     };
 
