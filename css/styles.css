@@ -87,6 +87,10 @@ body {
   margin-bottom: 1rem;
 }
 
+.weather-today > img {
+  width: 50px;
+}
+
 .days-list {
   display: flex;
   flex-direction: column;
@@ -110,5 +114,6 @@ body {
 }
 
 .days-list img {
+  width: 30px;
   margin-right: 2rem;
 }
