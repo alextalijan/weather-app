@@ -3,7 +3,7 @@ import filterWeatherData from './filterWeatherData.js';
 async function getLocationWeather(location) {
   try {
     const response = await fetch(
-      `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}`,
+      `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}?key=HAZHQ6XQNGVT4TSXZBUQ27T56`,
       { mode: 'cors' }
     );
     const jsonData = await response.json();
