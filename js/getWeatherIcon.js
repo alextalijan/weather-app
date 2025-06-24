@@ -1,13 +1,16 @@
 const getWeatherIcon = function thatReturnsEmojiBasedOnWeatherDescription(
   weatherIconDescription
 ) {
-  const weatherEmojis = {
-    'clear-day': '☀️',
-    'partly-cloudy-day': '⛅️',
-    rain: '🌧️',
-  };
-
-  return weatherEmojis[weatherIconDescription];
+  switch (weatherIconDescription) {
+    case 'clear-day':
+      return '☀️';
+    case 'partly-cloudy-day':
+      return '⛅️';
+    case 'rain':
+      return '🌧️';
+    default:
+      return '🌈';
+  }
 };
 
 export default getWeatherIcon;
